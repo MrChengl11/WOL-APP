@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">局域网远程开机</string>
+    <string name="main_hint">请确保电脑已开启 BIOS/网卡 WOL，且手机与电脑在同一局域网。</string>
+    <string name="add_device">添加电脑</string>
+    <string name="edit_device">编辑电脑</string>
+    <string name="device_name">电脑名称</string>
+    <string name="mac_address">MAC 地址</string>
+    <string name="broadcast_address">目标地址/广播地址</string>
+    <string name="port">端口（默认 9）</string>
+    <string name="wake">开机</string>
+    <string name="edit">编辑</string>
+    <string name="delete">删除</string>
+    <string name="cancel">取消</string>
+    <string name="save">保存</string>
+    <string name="hint_mac">例如 00:1A:2B:3C:4D:5E</string>
+    <string name="hint_broadcast">例如 192.168.1.255</string>
+    <string name="wol_sent">已发送唤醒包</string>
+    <string name="wol_failed">发送失败</string>
+    <string name="empty_name">请填写电脑名称</string>
+    <string name="invalid_mac">MAC 地址格式不正确</string>
+    <string name="invalid_broadcast">目标地址格式不正确</string>
+    <string name="confirm_delete">确定删除该设备吗？</string>
+</resources>
