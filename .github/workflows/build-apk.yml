@@ -23,9 +23,9 @@ jobs:
       uses: gradle/actions/setup-gradle@v3
 
     - name: Build APK with Gradle
-      # 重点：指定进入 WakeOnLan-Android 文件夹编译
       working-directory: ./WakeOnLan-Android
-      run: gradle assembleDebug
+      # 增加参数忽略 Kotlin 重复类冲突，并强制编译
+      run: gradle assembleDebug -Pandroid.dependencyResolutionManagement.ignoreDependencies -Dorg.gradle.jvmargs="-Xmx2048m" --warning-mode none
 
     - name: Upload APK Artifact
       uses: actions/upload-artifact@v4
