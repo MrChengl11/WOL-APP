@@ -19,14 +19,16 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    - name: Grant execute permission for gradlew
-      run: chmod +x gradlew || true
+    - name: Setup Gradle
+      uses: gradle/actions/setup-gradle@v3
 
-    - name: Build APK
-      run: ./gradlew assembleDebug --no-daemon
+    - name: Build APK with Gradle
+      # 重点：指定进入 WakeOnLan-Android 文件夹编译
+      working-directory: ./WakeOnLan-Android
+      run: gradle assembleDebug
 
     - name: Upload APK Artifact
       uses: actions/upload-artifact@v4
       with:
         name: wake-on-lan-apk
-        path: app/build/outputs/apk/debug/app-debug.apk
+        path: "**/build/outputs/apk/debug/app-debug.apk"
